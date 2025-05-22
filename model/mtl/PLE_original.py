@@ -151,10 +151,10 @@ class PLE(nn.Module):
 
         return [final_output1, final_output2]
 
-class PLE_final(nn.Module):
+class PLE_Original(nn.Module):
     def __init__(self, user_feature_dict, item_feature_dict, emb_dim=128, hidden_dim = 128,
                  output_size=1, num_task=2,device = 'cuda'):
-        super(PLE_final, self).__init__()
+        super(PLE_Original, self).__init__()
         
         # check input parameters
         if user_feature_dict is None or item_feature_dict is None:
@@ -177,10 +177,10 @@ class PLE_final(nn.Module):
                 item_cate_feature_nums += 1
                 setattr(self, item_cate, nn.Embedding(num[0], emb_dim))
 
-        # user embedding + item embedding
+        # user embedding + item embedding + numerical feature(ps: only age)
         hidden_size = emb_dim * (user_cate_feature_nums + item_cate_feature_nums) + \
-                      (len(user_feature_dict) - user_cate_feature_nums) + (
-                                  len(item_feature_dict) - item_cate_feature_nums)
+                        (len(user_feature_dict) - user_cate_feature_nums) + \
+                        (len(item_feature_dict) - item_cate_feature_nums)
 
 
         self.ple = PLE(input_size=hidden_size, num_specific_experts=2, num_shared_experts=2, experts_out=hidden_dim, experts_hidden=hidden_dim, towers_hidden=hidden_dim)

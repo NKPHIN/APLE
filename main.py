@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 from model.mtl.esmm import ESMM
 from model.mtl.mmoe import MMOE
 from model.mtl.shared_botttom import SharedBottomModel
-from model.mtl.PLE_original import PLE_final
+from model.mtl.PLE_original import PLE_Original
 from model.mtl.PLE_ame_tower_enhanced import PLE_final_AME_Tower_enhanced
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
@@ -100,6 +100,8 @@ if __name__ == "__main__":
             model = MMOE(user_feature_dict, item_feature_dict, emb_dim=args.embedding_size, device=args.device, num_task=num_task)
         elif args.model_name == 'shared_bottom':
             model = SharedBottomModel(user_feature_dict, item_feature_dict,emb_dim=args.embedding_size, device=args.device, nums_task=num_task)
+        elif args.model_name == 'ple':
+            model = PLE_Original(user_feature_dict, item_feature_dict, emb_dim=args.embedding_size, device=args.device, num_task=num_task)
         else:
             model = PLE_final_AME_Tower_enhanced(user_feature_dict, item_feature_dict, emb_dim=args.embedding_size, device=args.device, num_task=num_task)
  
