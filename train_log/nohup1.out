@@ -1,0 +1,47 @@
+2025-05-17 05:35:28.548390: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-05-17 05:35:29.751719: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Namespace(add_num_times=2, alpha=0.4, anneal_cap=0.2, bert_mask_prob=0.3, best_metric='NDCG@10', block_num=2, cand_num=100, ch=True, context_window=2, dataset_path='Tenrec/ctr_data_0.1M.csv', decay_step=5, device='cuda', dilations=[1, 4], dropout=0.3, early_stop=True, embedding_size=32, epochs=20, eval=True, factor_num=128, gamma=0.5, hidden_size=128, hidden_size_list=[128, 128], init_method='default', is_mp=False, is_parallel=False, is_pretrain=1, item_min=10, k=20, kd=False, kernel_size=3, l2_emb=0.0, latent_dim=128, lifelong_eval=True, ll_max_itemnum=0, local_rank=None, loss_type='BPR', lr=5e-06, max_len=20, mess_dropout=0.1, metric_ks=[5, 20], model_name='ple', mtl_task_num=2, negsample_savefolder='./data/neg_data/', negsample_size=99, node_dropout=0.1, num_embedding=1, num_gpu=1, num_groups=4, num_heads=4, num_items=1, num_labels=1, num_ng=4, num_users=1, optimizer='default', pad_token=0, pretrain_path='', prun_rate=0, re_epochs=20, reg_1=0.0, reg_2=0.0, rho=0.5, sample='random', sample_method='high-pop', sample_ratio=0.3, save_path='./checkpoint/', seed=100, source_path='', target_path='', task=-1, task1_out=0, task2_out=0, task3_out=0, task4_out=0, task_name='mtl', task_num=4, temp=7, test_batch_size=512, test_method='ufo', test_size=0.1, total_anneal_steps=1000, train_batch_size=512, user_profile='gender', val_batch_size=512, val_method='ufo', val_size=0.1111, valid_rate=100, weight_decay=0.0)
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:02<00:32,  2.34s/it] 13%|█▎        | 2/15 [00:04<00:29,  2.23s/it] 20%|██        | 3/15 [00:06<00:23,  1.97s/it] 27%|██▋       | 4/15 [00:06<00:15,  1.39s/it] 33%|███▎      | 5/15 [00:07<00:11,  1.10s/it] 40%|████      | 6/15 [00:09<00:12,  1.44s/it] 47%|████▋     | 7/15 [00:11<00:13,  1.69s/it] 53%|█████▎    | 8/15 [00:13<00:13,  1.86s/it] 60%|██████    | 9/15 [00:16<00:11,  1.99s/it] 67%|██████▋   | 10/15 [00:18<00:10,  2.10s/it] 73%|███████▎  | 11/15 [00:20<00:08,  2.19s/it] 80%|████████  | 12/15 [00:23<00:06,  2.28s/it] 87%|████████▋ | 13/15 [00:25<00:04,  2.35s/it] 93%|█████████▎| 14/15 [00:28<00:02,  2.39s/it]100%|██████████| 15/15 [00:30<00:00,  2.44s/it]100%|██████████| 15/15 [00:30<00:00,  2.05s/it]
+0it [00:00, ?it/s]1it [00:00,  5.86it/s]2it [00:00,  6.63it/s]5it [00:00, 13.23it/s]7it [00:00, 11.91it/s]9it [00:00, 11.27it/s]11it [00:01, 10.90it/s]13it [00:01, 10.63it/s]15it [00:01, 10.55it/s]17it [00:01, 12.00it/s]
+Epoch 1 train loss is 0.760, click auc is 0.515 and like auc is 0.576
+Epoch 1 val loss is 0.726, click auc is 0.543 and like auc is 0.666
+Epoch 2 train loss is 0.724, click auc is 0.549 and like auc is 0.674
+Epoch 2 val loss is 0.722, click auc is 0.556 and like auc is 0.685
+Epoch 3 train loss is 0.721, click auc is 0.564 and like auc is 0.692
+Epoch 3 val loss is 0.720, click auc is 0.568 and like auc is 0.696
+Epoch 4 train loss is 0.718, click auc is 0.578 and like auc is 0.707
+Epoch 4 val loss is 0.718, click auc is 0.578 and like auc is 0.705
+Epoch 5 train loss is 0.715, click auc is 0.590 and like auc is 0.722
+Epoch 5 val loss is 0.716, click auc is 0.587 and like auc is 0.715
+Epoch 6 train loss is 0.711, click auc is 0.601 and like auc is 0.740
+Epoch 6 val loss is 0.713, click auc is 0.595 and like auc is 0.727
+Epoch 7 train loss is 0.706, click auc is 0.613 and like auc is 0.760
+Epoch 7 val loss is 0.710, click auc is 0.603 and like auc is 0.738
+Epoch 8 train loss is 0.700, click auc is 0.624 and like auc is 0.780
+Epoch 8 val loss is 0.707, click auc is 0.610 and like auc is 0.747
+Epoch 9 train loss is 0.694, click auc is 0.634 and like auc is 0.796
+Epoch 9 val loss is 0.704, click auc is 0.617 and like auc is 0.755
+Epoch 10 train loss is 0.689, click auc is 0.644 and like auc is 0.810
+Epoch 10 val loss is 0.702, click auc is 0.622 and like auc is 0.761
+Epoch 11 train loss is 0.683, click auc is 0.653 and like auc is 0.821
+Epoch 11 val loss is 0.700, click auc is 0.627 and like auc is 0.767
+Epoch 12 train loss is 0.678, click auc is 0.661 and like auc is 0.831
+Epoch 12 val loss is 0.699, click auc is 0.632 and like auc is 0.770
+Epoch 13 train loss is 0.673, click auc is 0.669 and like auc is 0.840
+Epoch 13 val loss is 0.698, click auc is 0.637 and like auc is 0.774
+Epoch 14 train loss is 0.668, click auc is 0.676 and like auc is 0.848
+Epoch 14 val loss is 0.694, click auc is 0.641 and like auc is 0.778
+Epoch 15 train loss is 0.663, click auc is 0.683 and like auc is 0.854
+Epoch 15 val loss is 0.692, click auc is 0.645 and like auc is 0.783
+Epoch 16 train loss is 0.658, click auc is 0.689 and like auc is 0.861
+Epoch 16 val loss is 0.691, click auc is 0.649 and like auc is 0.786
+Epoch 17 train loss is 0.654, click auc is 0.695 and like auc is 0.866
+Epoch 17 val loss is 0.690, click auc is 0.653 and like auc is 0.789
+Epoch 18 train loss is 0.650, click auc is 0.701 and like auc is 0.871
+Epoch 18 val loss is 0.688, click auc is 0.656 and like auc is 0.791
+Epoch 19 train loss is 0.645, click auc is 0.706 and like auc is 0.875
+Epoch 19 val loss is 0.688, click auc is 0.659 and like auc is 0.792
+Epoch 20 train loss is 0.641, click auc is 0.711 and like auc is 0.879
+Epoch 20 val loss is 0.687, click auc is 0.662 and like auc is 0.795
+Epoch 20 test loss is 0.687, click auc is 0.660 and like auc is 0.793
