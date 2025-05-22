@@ -279,7 +279,7 @@ class PLE_final_AME_Tower_enhanced(nn.Module):
         self.ple = PLE(input_size=hidden_size, num_specific_experts=2, num_shared_experts=2, experts_out=hidden_dim, experts_hidden=hidden_dim, towers_hidden=hidden_dim)
 
     
-    def forward(self,x):
+    def forward(self, x):
         assert x.size()[1] == len(self.item_feature_dict) + len(self.user_feature_dict)
         # 
         final_hidden = []
@@ -289,7 +289,7 @@ class PLE_final_AME_Tower_enhanced(nn.Module):
                 user_embed_list, item_embed_list = list(), list()
                 for user_feature, num in self.user_feature_dict.items():
                     if num[0] > 1:
-                        user_embed_list.append(getattr(self, f"{user_feature}_shared")(x[:, num[1]].long()))
+                        user_embed_list.append(getattr(self, f"{user_feature}_shared")(x[:, num[1]].long()))    # num[1] 表示该列在张量中的列索引
                     else:
                         user_embed_list.append(x[:, num[1]].unsqueeze(1))
                 for item_feature, num in self.item_feature_dict.items():

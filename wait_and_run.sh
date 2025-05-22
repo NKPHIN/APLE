@@ -14,7 +14,7 @@ echo "进程 $TARGET_PID 已结束，开始运行 main.py"
 nohup python main.py \
   --task_name=mtl \
   --seed=100 \
-  --model_name=ple \
+  --model_name=aple \
   --dataset_path='Tenrec/ctr_data_0.1M.csv' \
   --train_batch_size=512 \
   --val_batch_size=512 \
