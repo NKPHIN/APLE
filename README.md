@@ -31,7 +31,9 @@ The network architecture of `PLE`  `AME` and `Resflow` is below:
 
 We combine these 3 model, and form our model as follow:
 
-<img src="./docs/APLE.png" alt="APLE" style="zoom:32%;" />
+<div align="center">
+    <img src="./docs/APLE.png" alt="APLE" width="32%" height="auto" />
+</div>
 
 
 #### Works
