@@ -56,5 +56,5 @@ The metrics of our model and baseline model are below:
 
 |               | Share-Bottom | MMOE  |   ESMM    |  PLE  |   APLE    |
 | :-----------: | :----------: | :---: | :-------: | :---: | :-------: |
-| **click AUC** |    0.676     | 0.706 |   0.513   | 0.700 | **0.727** |
+| **click AUC** |    0.676     | 0.706 |   0.693   | 0.700 | **0.727** |
 | **like AUC**  |    0.764     | 0.763 | **0.855** | 0.810 |   0.833   |
