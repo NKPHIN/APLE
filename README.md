@@ -31,7 +31,9 @@ The network architecture of `PLE`  `AME` and `Resflow` is below:
 
 We combine these 3 model, and form our model as follow:
 
-<img src="./docs/APLE.png" alt="APLE" style="zoom:32%;" />
+<div align="center">
+    <img src="./docs/APLE.png" alt="APLE" width="32%" height="auto" />
+</div>
 
 
 #### Works
@@ -54,5 +56,5 @@ The metrics of our model and baseline model are below:
 
 |               | Share-Bottom | MMOE  |   ESMM    |  PLE  |   APLE    |
 | :-----------: | :----------: | :---: | :-------: | :---: | :-------: |
-| **click AUC** |    0.676     | 0.706 |   0.513   | 0.700 | **0.727** |
-| **share AUC** |    0.764     | 0.763 | **0.855** | 0.810 |   0.833   |
+| **click AUC** |    0.676     | 0.706 |   0.693   | 0.700 | **0.727** |
+| **like AUC**  |    0.764     | 0.763 | **0.855** | 0.810 |   0.833   |
